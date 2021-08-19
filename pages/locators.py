@@ -10,3 +10,4 @@ class LoginPageLocators():
 
 class ProductPageLocators():
     add_to_basket_btn = (By.CSS_SELECTOR, '#add_to_basket_form button')
+    is_in_basket = (By.CSS_SELECTOR, '#messages .alert-success strong')
