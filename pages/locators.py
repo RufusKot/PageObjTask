@@ -14,3 +14,7 @@ class ProductPageLocators():
     is_in_basket = (By.CSS_SELECTOR, '#messages .alert-success strong')
     what_to_add_name = (By.CSS_SELECTOR, '.product_main h1')
     what_to_add_price = (By.CSS_SELECTOR, '.product_main .price_color')
+
+class BasePageLocators():
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
