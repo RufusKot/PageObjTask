@@ -48,6 +48,7 @@ class BasePage():
             WebDriverWait(self.browser, timeout, 1). \
                 until_not(EC.presence_of_element_located((how, what)))
         except TimeoutException:
+            print('chims')
             return False
         return True
 
@@ -58,3 +59,8 @@ class BasePage():
         login_link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
         login_link.click()
         assert self.browser.current_url == 'http://selenium1py.pythonanywhere.com/en-gb/accounts/login/'
+
+    def go_to_basket_page(self):
+        basket_btn = self.browser.find_element(*BasePageLocators.GO_BASKET_PAGE_BTN)
+        basket_btn.click()
+        assert 'basket' in self.browser.current_url, 'Test_script did not go to basket page'

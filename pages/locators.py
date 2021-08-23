@@ -16,3 +16,9 @@ class ProductPageLocators():
 
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    GO_BASKET_PAGE_BTN = (By.CSS_SELECTOR, '.page_inner div:nth-child(2) span a')
+
+
+class BasketPageLocators():
+    ITEMS_TO_BUY_NOW = (By.CSS_SELECTOR, '#content_inner div div h2')
+    EMPTY_BASKET_TEXT = (By.CSS_SELECTOR, '#content_inner p')
