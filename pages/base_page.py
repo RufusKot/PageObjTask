@@ -6,7 +6,7 @@ import math
 from .locators import BasePageLocators
 
 
-class BasePage():
+class BasePage:
     def __init__(self, browser, url, timeout=10):
         self.browser: WebDriver = browser
         self.url = url
