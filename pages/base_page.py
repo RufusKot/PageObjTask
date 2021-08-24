@@ -48,7 +48,6 @@ class BasePage():
             WebDriverWait(self.browser, timeout, 1). \
                 until_not(EC.presence_of_element_located((how, what)))
         except TimeoutException:
-            print('chims')
             return False
         return True
 
@@ -64,3 +63,7 @@ class BasePage():
         basket_btn = self.browser.find_element(*BasePageLocators.GO_BASKET_PAGE_BTN)
         basket_btn.click()
         assert 'basket' in self.browser.current_url, 'Test_script did not go to basket page'
+
+    def should_be_authorized_user(self):
+        assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented," \
+                                                                     " probably unauthorised user"

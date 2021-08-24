@@ -7,7 +7,7 @@ class ProductPage(BasePage):
     def add_to_basket(self):
         add = self.browser.find_element(*ProductPageLocators.ADD_TO_BSK_BTN)
         add.click()
-        self.solve_quiz_and_get_code()
+
 
     def what_to_add(self):
         text = self.browser.find_element(*ProductPageLocators.WHAT_TO_ADD_NAME).text
