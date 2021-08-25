@@ -1,5 +1,4 @@
 from .base_page import BasePage
-import time
 from .locators import ProductPageLocators
 
 
@@ -7,7 +6,6 @@ class ProductPage(BasePage):
     def add_to_basket(self):
         add = self.browser.find_element(*ProductPageLocators.ADD_TO_BSK_BTN)
         add.click()
-
 
     def what_to_add(self):
         text = self.browser.find_element(*ProductPageLocators.WHAT_TO_ADD_NAME).text
@@ -27,4 +25,3 @@ class ProductPage(BasePage):
 
     def success_message_disappeared(self):
         assert self.is_disappeared(*ProductPageLocators.IS_IN_BASKET), 'Element has not disappeared'
-
